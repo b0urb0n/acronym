@@ -22,7 +22,7 @@ def get_random_word(letter=None):
 if __name__ == "__main__":
     import argparse
     p = argparse.ArgumentParser()
-    p.add_argument('acronym')
+    p.add_argument('acronym', help='The acronym to solve (ie. CDC)')
     args = p.parse_args()
 
-    print ' '.join(solve_acronym(args.acronym))
+    print ' '.join(solve_acronym(args.acronym.lower()))
